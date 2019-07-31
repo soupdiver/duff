@@ -1,0 +1,20 @@
+{
+  "name": "duff",
+  "version": "0.0.1",
+  "description": "dev",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/soupdiver/duff"
+  },
+  "author": "",
+  "license": "ISC"
+}
