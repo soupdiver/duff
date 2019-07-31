@@ -1,6 +1,6 @@
 var mainWindow = null;
 
-const { app, BrowserWindow } = require('electron')
+const { app, autoUpdater, BrowserWindow } = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -30,6 +30,26 @@ function createWindow () {
     win = null
   })
 }
+
+autoUpdater.setFeedURL("https://google.de")
+
+autoUpdater.on('error',function(err){
+  console.log("error: "+err)
+})
+
+autoUpdater.on('checking-for-update',function(){
+  console.log("checking")
+})
+
+autoUpdater.on('update-available',function(){
+  console.log("update available")
+})
+
+autoUpdater.on('update-not-available',function(){
+  console.log("update not available")
+})
+
+autoUpdater.checkForUpdates()
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

@@ -4,12 +4,22 @@
   "description": "dev",
   "main": "main.js",
   "dependencies": {
-    "electron": "^6.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "electron": "^6.0.0",
+    "electron-builder": "^21.2.0"
+  },
+  "build": {
+    "appId": "duff.soupdiver",
+    "mac": {
+      "category": "dev"
+    }
+  },
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
