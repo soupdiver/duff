@@ -26,6 +26,8 @@ cache:
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
 
+before_install:
+  - if [ "$TRAVIS_OS_NAME" = osx ]; then ./osx-add-cert.sh; fi
 install:
   - |
     if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
