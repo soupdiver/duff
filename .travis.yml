@@ -27,7 +27,7 @@ cache:
     - $HOME/.cache/electron-builder
 script:
   - |
-    ./osx-add-cert.sh
+    ./osx-add-cert.sh;
     yarn install;
     yarn dist;
 before_cache:
