@@ -36,7 +36,7 @@ before_cache:
 deploy:
   provider: releases
   api_key: "$GITHUB_TOKEN"
-  file: "dist/duff-$TRAVIS_TAG-mac.zip"
+  file: "dist/duff-${TRAVIS_TAG:1}-mac.zip"
   skip_cleanup: true
   on:
     tags: true
