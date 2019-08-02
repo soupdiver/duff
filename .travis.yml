@@ -25,14 +25,6 @@ cache:
     - node_modules
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
-
-before_install:
-  - if [ "$TRAVIS_OS_NAME" = osx ]; then ./osx-add-cert.sh; fi
-install:
-  - |
-    if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      brew install yarn;
-    fi
 script:
   - |
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
@@ -52,6 +44,7 @@ script:
       # security unlock-keychain -p $KEYCHAIN_PASSWORD build.keychain;
       # echo $KEYSTORE | base64 --decode - > keystore.p12;
       # security import keystore.p12 -k build.keychain -P $KEYCHAIN_PASSWORD -T /usr/bin/codesign;
+      ./osx-add-cert.sh
       yarn install;
       yarn dist;
     fi
