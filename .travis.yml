@@ -26,9 +26,10 @@ cache:
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
 script:
-  - |
-    ./osx-add-cert.sh;
-    yarn install;
-    yarn dist;
+  - ls -a
+  - pwd
+  - ./osx-add-cert.sh
+  - yarn install
+  - yarn dist
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
