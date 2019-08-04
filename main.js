@@ -3,7 +3,7 @@ var mainWindow = null;
 const { app, autoUpdater, BrowserWindow } = require('electron')
 
 // The current version of your app.
-const APP_VERSION = require('../package.json').version
+const APP_VERSION = require('./package.json').version
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
