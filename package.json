@@ -1,6 +1,6 @@
 {
   "name": "duff",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "dev",
   "main": "main.js",
   "dependencies": {
@@ -19,7 +19,8 @@
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder --publish always",
+    "release": "electron-builder --publish always"
   },
   "repository": {
     "type": "git",

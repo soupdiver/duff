@@ -30,6 +30,6 @@ script:
   - pwd
   - ./osx-add-cert.sh
   - yarn install
-  - yarn dist
+  - yarn release
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
