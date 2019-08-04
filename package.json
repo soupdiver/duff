@@ -1,6 +1,6 @@
 {
   "name": "duff",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "dev",
   "main": "main.js",
   "dependencies": {

@@ -33,10 +33,3 @@ script:
   - yarn dist
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
-deploy:
-  provider: releases
-  api_key: "$GITHUB_TOKEN"
-  file: "dist/duff-${TRAVIS_TAG:1}-mac.zip"
-  skip_cleanup: true
-  on:
-    tags: true
